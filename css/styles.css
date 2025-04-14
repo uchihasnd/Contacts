@@ -1,3 +1,105 @@
-body{
-     background-color: aqua;
+html {
+  box-sizing: border-box;
+  font-size: 62.5%; /* 1REM = 10px */
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+body, .btn, .form-select {
+  font-family: "Roboto", sans-serif;
+  font-size: 1.4rem;
+  font-weight: 400;
+  line-height: 1.5rem;
+}
+
+.container {
+  max-width: 1024px;
+  margin: 0 auto;
+}
+
+.form-contacts {
+  display: block;
+  line-height: 1.5rem;
+}
+
+.form-contacts {
+  max-width: 60rem;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+}
+
+.form-field {
+  margin-bottom: 1rem;
+  display: flex;
+  align-items: center;
+  position: relative;
+  margin-top: 20px;
+}
+
+.form-input, input[type="tel"], input[type="number"], [type="email"] {
+  flex: 1;
+  padding: 1rem 1.6rem;
+  margin: 0.5rem;
+  border-radius: 0.5rem;
+  width: 100%;
+  font-size: 1.6rem;
+}
+
+.form-button {
+  margin-bottom: 1rem;
+  display: flex;
+  flex: 1;
+}
+
+.form-select {
+  padding: 1rem;
+  background-color: #fff;
+}
+
+.btn {
+  background-color: #E8F0F2;
+  color: #0b57d0e1;
+  font-weight: 600;
+  padding: 1rem;
+  border: none;
+  border-radius: 2rem;
+  width: 100%;
+  align-items: center;
+}
+
+.btn:hover {
+  background-color: #CBDCEB;
+  box-shadow:0 1px 0 1px rgba(12, 1, 1, 0.25);
+  cursor: pointer;
+}
+
+.notes {
+  resize: none;
+  height: 8rem;
+}
+
+.form-label {
+  position: absolute;
+  left: 3.5rem;
+  background: white;
+  color: gray;
+  padding: 0.5rem 1rem;
+  transition: 0.2s ease all;
+  pointer-events: none;
+}
+.form-input:focus {
+  border-color: 1px solid #0b57d0e1;
+}
+
+.form-input:focus + .form-label,
+.form-input:not(:placeholder-shown) + .form-label {
+  top: -5px;
+  left: 40px;
+  font-size: 1.2rem;
+  color: #333;
 }
