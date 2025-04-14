@@ -1,12 +1,109 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-     <meta charset="UTF-8">
-     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-     <link rel="stylesheet" href="css/styles.css">
-     <title>Contacts</title>
-</head>
-<body>
-     
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/styles.css" />
+    <title>Contacts</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="form-contacts">
+        <form action="" class="">
+          <div class="form-field">
+            <span class="material-symbols-outlined"> person </span>
+            <input
+              type="text"
+              class="form-input"
+              name=""
+              id="first-name"
+              placeholder=" "
+              required
+            />
+            <label for="first-name" class="form-label">First Name</label>
+          </div>
+          <div class="form-field">
+            <input type="text" class="form-input" name="" id="" placeholder=" " required />
+            <label for="last-name" class="form-label">Last Name</label>
+          </div>
+          <div class="form-field">
+            <span class="material-symbols-outlined">domain</span>
+            <input type="text" class="form-input" name="" id="" placeholder=" " />
+            <label for="company" class="form-label">Company</label>
+          </div>
+          <div class="form-field">
+            <input type="text" class="form-input" name="" id="" placeholder=" " />
+            <label for="" class="form-label">Job title</label>
+          </div>
+          <div class="form-field">
+            <span class="material-symbols-outlined">mail</span>
+            <input type="email" class="form-input" name="email" id="" placeholder=" "/>
+            <label for="" class="form-label">Email</label>
+          </div>
+          <div class="form-button">
+            <button class="btn"><span class="material-symbols-outlined">add</span> Add email</button>
+          </div>
+          <div class="form-field">
+            <span class="material-symbols-outlined">call</span>
+            <select name="" id="" class="form-select">
+              <option value="mx">🇲🇽 México</option>
+              <option value="🇦🇫">🇦🇫 Afghanistan</option>
+              <option value="🇨🇴">🇨🇴 Colombia</option>
+            </select>
+            <input type="tel" class="form-input" name="" id="" placeholder=" " />
+            <label for="" class="form-label">Phone</label>
+          </div>
+          <div class="form-field">
+            <div class="form-button">
+              <button class="btn"><span class="material-symbols-outlined">add</span> Add phone</button>
+            </div>
+          </div>
+          <div class="form-button">
+            <button class="btn"><span class="material-symbols-outlined">location_on</span>Add address</button>
+          </div>
+          <div class="form-field">
+            <span class="material-symbols-outlined">cake</span>
+            <select name="month" id="" class="form-select">
+              <option value="" selected>Month</option>
+              <option value="January">January</option>
+              <option value="February">February</option>
+              <option value="March">March</option>
+              <option value="April">April</option>
+              <option value="May">May</option>
+              <option value="June">June</option>
+              <option value="July">July</option>
+              <option value="August">August</option>
+              <option value="September">September</option>
+              <option value="October">October</option>
+              <option value="November">November</option>
+              <option value="December">December</option>
+            </select>
+            <input type="number" name="" id="" class="" min="1" max="31" placeholder="DD" />
+            <label for="" class="form-label">Day</label>
+            <input type="number" name="" id="" placeholder=" " />
+            <label for="" class="form-label">Year (optional)</label>
+          </div>
+          <div class="form-field">
+            <span class="material-symbols-outlined">sticky_note_2</span>
+            <textarea
+              name=""
+              id=""
+              cols="10"
+              rows="2"
+              placeholder=" "
+              class="form-input notes"
+            ></textarea>
+            <label for="" class="form-label">Notes</label>
+          </div>
+        </form>
+      </div>
+    </div>
+  </body>
 </html>
