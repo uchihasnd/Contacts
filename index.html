@@ -17,31 +17,37 @@
     <div class="container">
       <div class="form-contacts">
         <form action="" class="">
-          <div class="form-field">
-            <span class="material-symbols-outlined"> person </span>
-            <input
-              type="text"
-              class="form-input"
-              name=""
-              id="first-name"
-              placeholder=" "
-              required
-            />
-            <label for="first-name" class="form-label">First Name</label>
+          <div class="form-icon">
+            <span class="material-symbols-outlined form-icon"> person </span>
+            <div class="form-field">
+              <input
+                type="text"
+                class="form-input"
+                name=""
+                id="first-name"
+                placeholder=" "
+                required
+              />
+              <label for="first-name" class="form-label">First Name</label>
+            </div>
+            <div class="form-field">
+              <input type="text" class="form-input" name="" id="" placeholder=" " required />
+              <label for="last-name" class="form-label">Last Name</label>
+            </div>
           </div>
-          <div class="form-field">
-            <input type="text" class="form-input" name="" id="" placeholder=" " required />
-            <label for="last-name" class="form-label">Last Name</label>
-          </div>
-          <div class="form-field">
+
+          <div class="form-icon">
             <span class="material-symbols-outlined">domain</span>
-            <input type="text" class="form-input" name="" id="" placeholder=" " />
-            <label for="company" class="form-label">Company</label>
+            <div class="form-field">
+              <input type="text" class="form-input" name="" id="" placeholder=" " />
+              <label for="company" class="form-label">Company</label>
+            </div>
+            <div class="form-field">
+              <input type="text" class="form-input" name="" id="" placeholder=" " />
+              <label for="" class="form-label">Job title</label>
+            </div>
           </div>
-          <div class="form-field">
-            <input type="text" class="form-input" name="" id="" placeholder=" " />
-            <label for="" class="form-label">Job title</label>
-          </div>
+          
           <div class="form-field">
             <span class="material-symbols-outlined">mail</span>
             <input type="email" class="form-input" name="email" id="" placeholder=" "/>
@@ -53,12 +59,14 @@
           <div class="form-field">
             <span class="material-symbols-outlined">call</span>
             <select name="" id="" class="form-select">
-              <option value="mx">🇲🇽 México</option>
+              <option value="mx">🇲🇽 Mexico</option>
               <option value="🇦🇫">🇦🇫 Afghanistan</option>
               <option value="🇨🇴">🇨🇴 Colombia</option>
             </select>
-            <input type="tel" class="form-input" name="" id="" placeholder=" " />
+            <div class="form-field">
+              <input type="tel" class="form-input" name="" id="" placeholder=" " />
             <label for="" class="form-label">Phone</label>
+            </div>
           </div>
           <div class="form-field">
             <div class="form-button">
@@ -85,10 +93,14 @@
               <option value="November">November</option>
               <option value="December">December</option>
             </select>
-            <input type="number" name="" id="" class="" min="1" max="31" placeholder="DD" />
+            <div class="form-field">
+              <input type="number" name="" id="" class="" min="1" max="31" placeholder=" " />
             <label for="" class="form-label">Day</label>
-            <input type="number" name="" id="" placeholder=" " />
-            <label for="" class="form-label">Year (optional)</label>
+            </div>
+            <div class="form-field">
+              <input type="number" name="" id="" placeholder=" " />
+              <label for="" class="form-label">Year (optional)</label>
+            </div>
           </div>
           <div class="form-field">
             <span class="material-symbols-outlined">sticky_note_2</span>

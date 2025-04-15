@@ -22,8 +22,19 @@ body, .btn, .form-select {
 }
 
 .form-contacts {
-  display: block;
+  /* display: block; */
   line-height: 1.5rem;
+}
+
+.form-icon {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+.form-group {
+  margin-bottom: 0.5rem;
 }
 
 .form-contacts {
@@ -31,6 +42,7 @@ body, .btn, .form-select {
   margin: 0 auto;
   display: flex;
   flex-direction: column;
+  align-items: center;
 }
 
 .form-field {
@@ -38,16 +50,21 @@ body, .btn, .form-select {
   display: flex;
   align-items: center;
   position: relative;
-  margin-top: 20px;
+  margin-top: 10px;
 }
 
-.form-input, input[type="tel"], input[type="number"], [type="email"] {
+.form-input, .form-select, input[type="tel"], input[type="number"], input[type="email"] {
   flex: 1;
   padding: 1rem 1.6rem;
   margin: 0.5rem;
   border-radius: 0.5rem;
   width: 100%;
   font-size: 1.6rem;
+  outline: none;
+}
+
+.input[type="text"]:focus-visible {
+  border-style: 100px solid #0f0f0f;
 }
 
 .form-button {
@@ -56,14 +73,13 @@ body, .btn, .form-select {
   flex: 1;
 }
 
-.form-select {
-  padding: 1rem;
-  background-color: #fff;
+.material-symbols-outlined {
+  font-size: 1.4rem;
 }
 
 .btn {
   background-color: #E8F0F2;
-  color: #0b57d0e1;
+  color: #0b57d0;
   font-weight: 600;
   padding: 1rem;
   border: none;
@@ -74,7 +90,7 @@ body, .btn, .form-select {
 
 .btn:hover {
   background-color: #CBDCEB;
-  box-shadow:0 1px 0 1px rgba(12, 1, 1, 0.25);
+  box-shadow: 0 1px 0 1px rgba(12, 1, 1, 0.25);
   cursor: pointer;
 }
 
@@ -93,7 +109,8 @@ body, .btn, .form-select {
   pointer-events: none;
 }
 .form-input:focus {
-  border-color: 1px solid #0b57d0e1;
+  outline: none;
+  border-color:#0b57d0;
 }
 
 .form-input:focus + .form-label,
@@ -102,4 +119,12 @@ body, .btn, .form-select {
   left: 40px;
   font-size: 1.2rem;
   color: #333;
+}
+
+/* Media queries */
+
+@media (min-width: 600px) {
+  .form-field {
+    display: flex;
+  }
 }
