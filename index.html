@@ -23,15 +23,13 @@
               <input
                 type="text"
                 class="form-input"
-                name=""
                 id="first-name"
                 placeholder=" "
-                required
               />
               <label for="first-name" class="form-label">First Name</label>
             </div>
             <div class="form-field">
-              <input type="text" class="form-input" name="" id="" placeholder=" " required />
+              <input type="text" class="form-input" placeholder=" " required />
               <label for="last-name" class="form-label">Last Name</label>
             </div>
           </div>
@@ -39,35 +37,39 @@
           <div class="form-icon">
             <span class="material-symbols-outlined">domain</span>
             <div class="form-field">
-              <input type="text" class="form-input" name="" id="" placeholder=" " />
+              <input type="text" class="form-input" placeholder=" " />
               <label for="company" class="form-label">Company</label>
             </div>
             <div class="form-field">
-              <input type="text" class="form-input" name="" id="" placeholder=" " />
-              <label for="" class="form-label">Job title</label>
+              <input type="text" class="form-input" placeholder=" " />
+              <label for="job-title" class="form-label">Job title</label>
             </div>
           </div>
-          
+
           <div class="form-field">
             <span class="material-symbols-outlined">mail</span>
-            <input type="email" class="form-input" name="email" id="" placeholder=" "/>
-            <label for="" class="form-label">Email</label>
+            <input type="email" class="form-input" placeholder=" "/>
+            <label for="email" class="form-label">Email</label>
           </div>
           <div class="form-button">
             <button class="btn"><span class="material-symbols-outlined">add</span> Add email</button>
           </div>
-          <div class="form-field">
+
+          <div class="form-icon">
             <span class="material-symbols-outlined">call</span>
-            <select name="" id="" class="form-select">
-              <option value="mx">🇲🇽 Mexico</option>
-              <option value="🇦🇫">🇦🇫 Afghanistan</option>
-              <option value="🇨🇴">🇨🇴 Colombia</option>
-            </select>
             <div class="form-field">
-              <input type="tel" class="form-input" name="" id="" placeholder=" " />
-            <label for="" class="form-label">Phone</label>
+              <select class="form-select" placeholder="">
+                <option value="MX">🇲🇽 Mexico (+52)</option>
+                <option value="AF">🇦🇫 Afghanistan (+93)</option>
+                <option value="CO">🇨🇴 Colombia (+57)</option>
+              </select>
+            </div>
+            <div class="form-field">
+              <input type="tel" class="form-input" placeholder=" " />
+              <label for="phone" class="form-label">Phone</label>
             </div>
           </div>
+
           <div class="form-field">
             <div class="form-button">
               <button class="btn"><span class="material-symbols-outlined">add</span> Add phone</button>
@@ -76,43 +78,46 @@
           <div class="form-button">
             <button class="btn"><span class="material-symbols-outlined">location_on</span>Add address</button>
           </div>
-          <div class="form-field">
+
+          <div class="form-icon">
             <span class="material-symbols-outlined">cake</span>
-            <select name="month" id="" class="form-select">
-              <option value="" selected>Month</option>
-              <option value="January">January</option>
-              <option value="February">February</option>
-              <option value="March">March</option>
-              <option value="April">April</option>
-              <option value="May">May</option>
-              <option value="June">June</option>
-              <option value="July">July</option>
-              <option value="August">August</option>
-              <option value="September">September</option>
-              <option value="October">October</option>
-              <option value="November">November</option>
-              <option value="December">December</option>
-            </select>
             <div class="form-field">
-              <input type="number" name="" id="" class="" min="1" max="31" placeholder=" " />
-            <label for="" class="form-label">Day</label>
-            </div>
-            <div class="form-field">
-              <input type="number" name="" id="" placeholder=" " />
-              <label for="" class="form-label">Year (optional)</label>
+              <select name="month" class="form-select" placeholder=" ">
+                <option value="" disabled selected hidden></option>
+                <option value="January">January</option>
+                <option value="February">February</option>
+                <option value="March">March</option>
+                <option value="April">April</option>
+                <option value="May">May</option>
+                <option value="June">June</option>
+                <option value="July">July</option>
+                <option value="August">August</option>
+                <option value="September">September</option>
+                <option value="October">October</option>
+                <option value="November">November</option>
+                <option value="December">December</option>
+              </select>
+              <label for="month" class="form-label">Month</label>
+              <div class="form-field">
+                <input type="number" class="form-input" min="1" max="31" placeholder=" " />
+              <label for="day" class="form-label">Day</label>
+              </div>
+              <div class="form-field">
+                <input type="number" class="form-input" placeholder=" " />
+                <label for="year" class="form-label">Year (optional)</label>
+              </div>
             </div>
           </div>
+
           <div class="form-field">
             <span class="material-symbols-outlined">sticky_note_2</span>
             <textarea
-              name=""
-              id=""
               cols="10"
               rows="2"
               placeholder=" "
               class="form-input notes"
             ></textarea>
-            <label for="" class="form-label">Notes</label>
+            <label for="notes" class="form-label">Notes</label>
           </div>
         </form>
       </div>
