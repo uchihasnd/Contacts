@@ -75,7 +75,6 @@ body, .btn {
 .form-row {
   align-items: center;
   display: flex;
-  gap: 1.2rem;
   margin-top: 10px;
 }
 
@@ -93,26 +92,31 @@ body, .btn {
 
 .form-field {
   display: flex;
-  flex-direction: column;
   flex: 1;
   margin: 0;
   position: relative;
 }
 
-.form-input, .form-select {
+.form-field-container {
+  display: flex;
+  flex-direction: row;
+  flex: 1;
+}
+
+.form-input {
   background-color: #fff;
   border-radius: 0.5rem;
   border: 1px solid #B7B7B7;
   flex: 1;
   font-size: 1.4rem;
-  margin: 0.5rem 0;
+  margin: 0.5rem 1rem;
   outline: none;
   padding: 1rem 1.6rem;
   transition: border 0.2s ease;
   width: 100%;
 }
 
-.form-input:hover, .form-select:hover {
+.form-input:hover {
   border: 1px solid #0f0f0f;
 }
 
@@ -198,8 +202,64 @@ select.form-input:invalid + .form-label {
 
 /* Media queries */
 
-@media (min-width: 600px) {
-  .form-field {
+@media (max-width: 600px) {
+
+  .contact-photo {
+    left: 40%;
+  }
+
+  .img-contact-photo {
+    width: 100px;
+    height: 100px;
+  }
+
+  .btn-add-photo {
+    bottom: 0;
+    right: -1rem;
+  }
+
+  .form-contacts {
+    align-items: stretch;
+    margin-left: 1rem;
+  }
+
+  .form-row {
+    flex-direction: row;
+    margin-bottom: 1.6rem;
+    width: 100%;
+  }
+
+  .form-field-container {
     display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    width: 100%;
+  }
+
+  .form-button {
+    width: 100%;
+  }
+}
+
+@media (max-width: 900px) {
+
+  .contact-photo {
+    left: 40%;
+  }
+
+  .btn-add-photo {
+    bottom: 0;
+    right: -1rem;
+  }
+
+  .form-field-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    width: 100%;
+  }
+
+  .multiple-input-row {
+    flex-direction: row;
   }
 }
