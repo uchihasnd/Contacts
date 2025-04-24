@@ -22,23 +22,54 @@ body, .btn {
   margin: 0 auto;
 }
 
-.header-form {
-  display: flex;
-  flex-direction: row;
-  justify-content: end;
-  align-items: center;
-  margin-top: 2rem;
-  gap: 0.5rem;
-}
+/* Header - Save button */
 
-.btn-save {
-  padding: 1rem 2rem;
-  border-radius: 3rem;
-  border: none;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
+  .header-form {
+    align-items: center;
+    background-color: #fff;
+    display: flex;
+    flex-direction: row;
+    gap: 0.5rem;
+    justify-content: space-between;
+    margin-top: 1rem;
+    padding: 1rem 0;
+    position: sticky;
+    top: 0;
+    width: 100%;
+    z-index: 1;
+  }
+
+  .arrow-back, .star-icon {
+    cursor: pointer;
+    padding: 0.5rem;
+  }
+
+  .arrow-back:hover, .star-icon:hover {
+    background-color: rgb(241, 235, 235);
+    padding: 0.5rem;
+    border-radius: 50%;
+  }
+
+  .save-button {
+    align-items: center;
+    display: flex;
+    gap: 1rem;
+  }
+
+  .btn-save {
+    border-radius: 3rem;
+    border: none;
+    cursor: pointer;
+    padding: 1rem 2rem;
+  }
+
+  .btn-save:hover {
+    background-color: #0b57d0;
+    color: #fff;
+    transition: border 0.2s ease;
+  }
+
+/* Contact photo */
 
 .contact-photo {
   display: inline-block;
@@ -67,6 +98,8 @@ body, .btn {
   position: absolute;
   right: 0.5rem;
 }
+
+/* Form */
 
 .form-contacts {
   line-height: 1.5rem;
@@ -109,7 +142,7 @@ body, .btn {
   border: 1px solid #B7B7B7;
   flex: 1;
   font-size: 1.4rem;
-  margin: 0.5rem 1rem;
+  margin: 0.5rem;
   outline: none;
   padding: 1rem 1.6rem;
   transition: border 0.2s ease;
@@ -124,7 +157,8 @@ body, .btn {
   display: flex;
   flex: 1;
   margin-bottom: 1rem;
-  margin-left: calc(2.4rem + 1.2rem);
+  margin-left: calc(2.4rem + 1rem);
+  margin-right: 1rem;
 }
 
 .material-symbols-outlined {
@@ -137,7 +171,7 @@ body, .btn {
 
 .btn {
   align-items: center;
-  background-color: #E8F0F2;
+  background-color: #EEF5FF;
   border-radius: 2rem;
   border: none;
   color: #0b57d0;
@@ -149,9 +183,10 @@ body, .btn {
 }
 
 .btn:hover {
-  background-color: #CBDCEB;
+  background-color: #d0e4f8;
   box-shadow: 0 1px 0 1px rgba(12, 1, 1, 0.25);
   cursor: pointer;
+  transition: 0.3s;
 }
 
 .notes {
@@ -166,7 +201,7 @@ body, .btn {
   padding: 0.5rem 0.5rem;
   pointer-events: none;
   position: absolute;
-  top: 1rem;
+  top: 1.2rem;
   transition: 0.2s ease all;
 }
 
@@ -185,12 +220,18 @@ body, .btn {
   top: -5px;
 }
 
+/* Input placeholder animation */
+
+.input-placeholder:focus::placeholder {
+  color: #999;
+}
+
 /* Select animation */
 
 select.form-input:not(:focus):invalid + .form-label {
   color: gray;
   font-size: 1.4rem;
-  top: 1rem;
+  top: 1.5rem;
 }
 
 select.form-input:invalid + .form-label {
@@ -198,6 +239,25 @@ select.form-input:invalid + .form-label {
   font-size: 1.2rem;
   left: 20px;
   top: -5px;
+}
+
+.show-more {
+  margin: 2rem 0;
+}
+
+.btn-show-more {
+  background-color: transparent;
+  border-radius: 3rem;
+  border: none;
+  color: #0b57d0;
+  cursor: pointer;
+  font-weight: 600;
+  padding: 1rem;
+}
+
+.btn-show-more:hover {
+  background-color: #EEF5FF;
+  transition: border 0.2s ease;
 }
 
 /* Media queries */
@@ -239,9 +299,17 @@ select.form-input:invalid + .form-label {
   .form-button {
     width: 100%;
   }
+
+  .form-input {
+    margin: 1rem;
+  }
+
+  .form-label {
+    top: 1.5rem;
+  }
 }
 
-@media (max-width: 900px) {
+@media (min-width: 601px) and (max-width: 900px) {
 
   .contact-photo {
     left: 40%;
@@ -257,6 +325,13 @@ select.form-input:invalid + .form-label {
     flex-direction: column;
     justify-content: flex-start;
     width: 100%;
+  }
+  .form-input {
+    margin: 1rem;
+  }
+
+  .form-label {
+    top: 1.7rem;
   }
 
   .multiple-input-row {
