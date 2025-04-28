@@ -36,7 +36,7 @@
             />
             <div class="contact-photo-btn">
               <button type="button" class="btn-add-photo">
-                <span class="material-symbols-outlined"> add </span>
+                <span class="material-symbols-outlined add-photo-icon"> add </span>
               </button>
             </div>
           </div>
@@ -66,7 +66,7 @@
           </div>
 
           <div class="form-row">
-            <span class="material-symbols-outlined">domain</span>
+            <span class="material-symbols-outlined form-icon">domain</span>
             <div class="form-field-container">
               <div class="form-field">
                 <input type="text" class="form-input" placeholder=" " />
@@ -80,7 +80,7 @@
           </div>
 
           <div class="form-row">
-            <span class="material-symbols-outlined">mail</span>
+            <span class="material-symbols-outlined form-icon">mail</span>
             <div class="form-field-container">
               <div class="form-field">
                 <input type="email" class="form-input" placeholder=" " />
@@ -99,17 +99,18 @@
           </div>
 
           <div class="form-row">
-            <span class="material-symbols-outlined">call</span>
+            <span class="material-symbols-outlined form-icon">call</span>
             <div class="form-field-container multiple-input-row">
-              <div class="form-field">
+              <div class="form-field input-country">
                 <select class="form-input">
+                  <option value="" selected disabled hidden>🇲🇽</option>
                   <option value="MX">🇲🇽 Mexico (+52)</option>
                   <option value="AF">🇦🇫 Afghanistan (+93)</option>
                   <option value="CO">🇨🇴 Colombia (+57)</option>
                 </select>
               </div>
-              <div class="form-field">
-                <input type="tel" class="form-input" placeholder=" " />
+              <div class="form-field input-phone">
+                <input type="tel" class="form-input " placeholder=" " />
                 <label for="phone" class="form-label">Phone</label>
               </div>
             </div>
@@ -135,10 +136,10 @@
           </div>
 
           <div class="form-row">
-            <span class="material-symbols-outlined">cake</span>
-            <div class="form-field-container multiple-input-row">
+            <span class="material-symbols-outlined form-icon">cake</span>
+            <div class="form-field-container multiple-input-row birthday-row">
               <div class="form-field">
-                <select name="month" id="month" class="form-input" required>
+                <select name="month" id="month" class="form-input select-month" required>
                   <option value="" disabled selected hidden></option>
                   <option value="January">January</option>
                   <option value="February">February</option>
@@ -159,7 +160,7 @@
               <div class="form-field">
                 <input
                   type="number"
-                  class="form-input"
+                  class="form-input input-day"
                   min="1"
                   max="31"
                   placeholder="DD"
@@ -170,7 +171,8 @@
               <div class="form-field">
                 <input
                   type="number"
-                  class="form-input input-placeholder"
+                  class="form-input input-placeholder input-year"
+                  min="1000"
                   placeholder="YYYY"
                 />
                 <label for="year" class="form-label">Year (optional)</label>
@@ -179,11 +181,11 @@
           </div>
 
           <div class="form-row">
-            <span class="material-symbols-outlined">sticky_note_2</span>
+            <span class="material-symbols-outlined form-icon">sticky_note_2</span>
             <div class="form-field-container">
               <div class="form-field">
                 <textarea
-                  cols="10"
+                  cols="4"
                   rows="2"
                   placeholder=" "
                   class="form-input notes"
