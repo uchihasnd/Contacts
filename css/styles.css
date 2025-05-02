@@ -10,7 +10,8 @@ html {
   padding: 0;
 }
 
-body, .btn {
+body,
+.btn {
   font-family: "Roboto", "Segoe UI Emoji", sans-serif;
   font-size: 1.4rem;
   font-weight: 400;
@@ -24,50 +25,55 @@ body, .btn {
 
 /* Header - Save button */
 
-  .header-form {
-    align-items: center;
-    background-color: #fff;
-    display: flex;
-    flex-direction: row;
-    gap: 0.5rem;
-    justify-content: space-between;
-    margin-top: 1rem;
-    padding: 1rem 0;
-    position: sticky;
-    top: 0;
-    width: 100%;
-    z-index: 1;
-  }
+.header-form {
+  align-items: center;
+  background-color: #fff;
+  display: flex;
+  flex-direction: row;
+  gap: 0.5rem;
+  justify-content: space-between;
+  margin-top: 1rem;
+  padding: 1rem 0;
+  position: sticky;
+  top: 0;
+  width: 100%;
+  z-index: 1;
+}
 
-  .arrow-back, .star-icon {
-    cursor: pointer;
-    padding: 0.5rem;
-  }
+.arrow-back,
+.star-icon {
+  cursor: pointer;
+  font-size: 2rem !important;
+  padding: 0.5rem;
+}
 
-  .arrow-back:hover, .star-icon:hover {
-    background-color: rgb(241, 235, 235);
-    padding: 0.5rem;
-    border-radius: 50%;
-  }
+.arrow-back:hover,
+.star-icon:hover {
+  background-color: rgb(241, 235, 235);
+  padding: 0.5rem;
+  border-radius: 50%;
+}
 
-  .save-button {
-    align-items: center;
-    display: flex;
-    gap: 1rem;
-  }
+.save-button {
+  align-items: center;
+  display: flex;
+  gap: 1rem;
+}
 
-  .btn-save {
-    border-radius: 3rem;
-    border: none;
-    cursor: pointer;
-    padding: 1rem 2rem;
-  }
+.btn-save {
+  border-radius: 3rem;
+  border: none;
+  color: #b4b4b8;
+  cursor: pointer;
+  padding: 1rem 2rem;
+}
 
-  .btn-save:hover {
-    background-color: #0b57d0;
-    color: #fff;
-    transition: border 0.2s ease;
-  }
+.btn-save:hover {
+  background-color: #0b57d0;
+  box-shadow: 1px 1px 6px rgba(12, 1, 1, 0.4);
+  color: #fff;
+  transition: border 0.2s ease;
+}
 
 /* Contact photo */
 
@@ -94,7 +100,7 @@ body, .btn {
   cursor: pointer;
   display: flex;
   justify-content: center;
-  padding: 0.5rem;
+  padding: 1rem;
   position: absolute;
   right: 0.5rem;
 }
@@ -108,7 +114,8 @@ body, .btn {
 .form-row {
   align-items: center;
   display: flex;
-  margin-top: 10px;
+  margin-top: 1.5rem;
+  gap: 2rem;
 }
 
 .form-icon {
@@ -125,24 +132,26 @@ body, .btn {
 
 .form-field {
   display: flex;
-  flex: 1;
   margin: 0;
   position: relative;
+  width: 100%;
+  gap: 8px;
 }
 
 .form-field-container {
   display: flex;
   flex-direction: row;
-  flex: 1;
+  width: 100%;
 }
 
 .form-input {
   background-color: #fff;
   border-radius: 0.5rem;
-  border: 1px solid #B7B7B7;
+  border: 1px solid #b7b7b7;
+  display: flex;
   flex: 1;
   font-size: 1.4rem;
-  margin: 0.5rem;
+  margin-right: 1rem;
   outline: none;
   padding: 1rem 1.6rem;
   transition: border 0.2s ease;
@@ -153,12 +162,33 @@ body, .btn {
   border: 1px solid #0f0f0f;
 }
 
+.multiple-input-row {
+  display: flex;
+  width: 100%;
+}
+
+.input-country {
+  flex-basis: 22.5%;
+}
+
+.birthday-row .form-field:nth-child(1) {
+  flex: 0 0 40%;
+}
+
+.birthday-row .form-field:nth-child(2) {
+  flex: 0 0 20%;
+}
+
+.birthday-row .form-field:nth-child(3) {
+  flex: 0 0 40%;
+}
+
 .form-button {
   display: flex;
   flex: 1;
   margin-bottom: 1rem;
-  margin-left: calc(2.4rem + 1rem);
-  margin-right: 1rem;
+  margin-left: calc(2.4rem + 2rem);
+  margin-right: 0.5rem;
 }
 
 .material-symbols-outlined {
@@ -171,7 +201,7 @@ body, .btn {
 
 .btn {
   align-items: center;
-  background-color: #EEF5FF;
+  background-color: #eef5ff;
   border-radius: 2rem;
   border: none;
   color: #0b57d0;
@@ -191,33 +221,35 @@ body, .btn {
 
 .notes {
   resize: none;
-  height: 10rem;
+  height: 6rem;
 }
 
 .form-label {
   background: white;
   color: gray;
-  left: 2rem;
+  left: 1.6rem;
   padding: 0.5rem 0.5rem;
   pointer-events: none;
   position: absolute;
-  top: 1.2rem;
+  top: 0.8rem;
   transition: 0.2s ease all;
+  line-height: 1;
 }
 
 /* Input animation */
 
 .form-input:focus {
-  border-color:#0b57d0;
-  outline: none;
+  outline: 2px solid #0b57d0;
+  border-color: transparent;
+  outline-offset: -1px;
 }
 
 .form-input:focus + .form-label,
 .form-input:not(:placeholder-shown) + .form-label {
-  color: #333;
+  color: #0b57d0;
   font-size: 1.2rem;
   left: 20px;
-  top: -5px;
+  top: -10px;
 }
 
 /* Input placeholder animation */
@@ -231,7 +263,7 @@ body, .btn {
 select.form-input:not(:focus):invalid + .form-label {
   color: gray;
   font-size: 1.4rem;
-  top: 1.5rem;
+  top: 0.8rem;
 }
 
 select.form-input:invalid + .form-label {
@@ -256,14 +288,13 @@ select.form-input:invalid + .form-label {
 }
 
 .btn-show-more:hover {
-  background-color: #EEF5FF;
+  background-color: #eef5ff;
   transition: border 0.2s ease;
 }
 
 /* Media queries */
 
 @media (max-width: 600px) {
-
   .contact-photo {
     left: 40%;
   }
@@ -276,6 +307,42 @@ select.form-input:invalid + .form-label {
   .btn-add-photo {
     bottom: 0;
     right: -1rem;
+    padding: 0.6rem;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .btn-icon {
+    margin-bottom: 8px;
+  }
+
+  .btn {
+    padding: 1rem 0.5rem;
+    margin-bottom: 0;
+  }
+
+  .add-photo-icon {
+    font-size: 2.2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .form-icon {
+    padding-top: 1.8rem;
+  }
+
+  .form-row {
+    flex-direction: row;
+    width: 100%;
+    align-items: flex-start;
+  }
+
+  .form-row .material-symbols-outlined {
+    margin-bottom: 0;
   }
 
   .form-contacts {
@@ -283,10 +350,8 @@ select.form-input:invalid + .form-label {
     margin-left: 1rem;
   }
 
-  .form-row {
-    flex-direction: row;
-    margin-bottom: 1.6rem;
-    width: 100%;
+  .input-month {
+    flex-basis: 30%;
   }
 
   .form-field-container {
@@ -294,6 +359,28 @@ select.form-input:invalid + .form-label {
     flex-direction: column;
     justify-content: flex-start;
     width: 100%;
+  }
+
+  .multiple-input-row {
+    flex-direction: row;
+  }
+
+  .birthday-row {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .birthday-row .form-field:nth-child(1) {
+    flex: 1 0 60%;
+    min-width: 0;
+  }
+
+  .birthday-row .form-field:nth-child(2) {
+    flex: 1 0 calc(40% - 8px);
+  }
+
+  .birthday-row .form-field:nth-child(3) {
+    flex: 0 0 100%;
   }
 
   .form-button {
@@ -301,23 +388,62 @@ select.form-input:invalid + .form-label {
   }
 
   .form-input {
-    margin: 1rem;
+    margin-top: 1rem;
   }
 
   .form-label {
-    top: 1.5rem;
+    top: 2.3rem;
+    padding: 0 4px;
+  }
+
+  .input-country {
+    flex-basis: 20%;
+    min-width: 80px;
+  }
+
+  /* Input animation */
+
+  .form-input:focus + .form-label,
+  .form-input:not(:placeholder-shown) + .form-label {
+    color: #0b57d0;
+    font-size: 1.2rem;
+    left: 20px;
+    top: 3px;
+  }
+
+  /* Select animation */
+
+  select.form-input:not(:focus):invalid + .form-label {
+    color: gray;
+    font-size: 1.4rem;
+    top: 2.4rem;
+  }
+
+  select.form-input:invalid + .form-label {
+    color: #333;
+    font-size: 1.2rem;
+    left: 20px;
+    top: 3px;
   }
 }
 
 @media (min-width: 601px) and (max-width: 900px) {
-
   .contact-photo {
     left: 40%;
   }
 
   .btn-add-photo {
     bottom: 0;
-    right: -1rem;
+    right: -0.4rem;
+  }
+
+  .form-row {
+    flex-direction: row;
+    align-items: flex-start;
+  }
+
+  .form-icon {
+    padding-top: 1.8rem;
   }
 
   .form-field-container {
@@ -326,12 +452,44 @@ select.form-input:invalid + .form-label {
     justify-content: flex-start;
     width: 100%;
   }
-  .form-input {
-    margin: 1rem;
-  }
 
   .form-label {
-    top: 1.7rem;
+    top: 2.3rem;
+    left: 1rem;
+    padding: 0 4px;
+  }
+
+  .form-input {
+    margin-top: 1rem;
+  }
+
+  .input-country {
+    flex-basis: 22.5%;
+  }
+
+  /* Input animation */
+
+  .form-input:focus + .form-label,
+  .form-input:not(:placeholder-shown) + .form-label {
+    color: #0b57d0;
+    font-size: 1.2rem;
+    left: 20px;
+    top: 3px;
+  }
+
+  /* Select animation */
+
+  select.form-input:not(:focus):invalid + .form-label {
+    color: gray;
+    font-size: 1.4rem;
+    top: 2.5rem;
+  }
+
+  select.form-input:invalid + .form-label {
+    color: #333;
+    font-size: 1.2rem;
+    left: 20px;
+    top: 3px;
   }
 
   .multiple-input-row {
