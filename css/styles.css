@@ -168,7 +168,7 @@ body,
 }
 
 .input-country {
-  flex-basis: 30%;
+  flex-basis: 22.5%;
 }
 
 .birthday-row .form-field:nth-child(1) {
@@ -396,6 +396,11 @@ select.form-input:invalid + .form-label {
     padding: 0 4px;
   }
 
+  .input-country {
+    flex-basis: 20%;
+    min-width: 80px;
+  }
+
   /* Input animation */
 
   .form-input:focus + .form-label,
@@ -456,6 +461,10 @@ select.form-input:invalid + .form-label {
 
   .form-input {
     margin-top: 1rem;
+  }
+
+  .input-country {
+    flex-basis: 22.5%;
   }
 
   /* Input animation */
